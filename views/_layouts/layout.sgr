@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='description' content='Tangoschuhe Turquoise / Chaussures de tango Turquoise')
+    meta(name='author' content='fusil.li')
+    block(name='title')
+      title Turquoise Tango Shoes
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Work+Sans')
+    link(rel='stylesheet' href='/css/main.css')
+  body.bg-black.font-sans.leading-normal
+    include(src='_includes/icons.sgr')
+    header.bg-white(role='banner')
+      include(src='_includes/header.sgr')
+      .bg-white.border-t.border-b
+        .inner
+          include(src='_includes/nav.sgr')
+    main.bg-white.text-black(role='main' id='{{ pageId }}')
+      div.inner.py-8
+        block(name='home')
+        block(name='grid')
+    footer.bg-black.text-grey(role='contentinfo')
+      .inner
+        include(src='_includes/nav.sgr')
+        if(condition='pageId !== "about-index"')
+          include(src='_includes/footer.sgr')
+        p.text-center.border-t.py-4.m-0 &copy; Turquoise {{ year }}, All rights reserved
+    block(name='javascript')

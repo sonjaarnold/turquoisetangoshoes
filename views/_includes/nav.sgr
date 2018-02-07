@@ -1,0 +1,8 @@
+nav.py-4(role='navigation')
+  ul.sm_flex.flex-col.sm_flex-row.justify-between.list-reset.md_text-lg
+    each(loop='item, index of data.menu')
+      li.flex-1.text-center(class='{{ index === data.menu.length - 1 ? "border-r-0" : "sm_border-r" }}')
+        if(condition='pageId === item.pageId')
+          a(href='{{ item.url }}' class='active') {{ item.title }}
+        else
+          a(href='{{ item.url }}') {{ item.title }}

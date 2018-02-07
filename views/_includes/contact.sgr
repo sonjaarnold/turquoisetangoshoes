@@ -1,0 +1,9 @@
+p.mb-1
+  | Sonja Arnold-Zwimpfer
+  br
+  | Römerswil 7
+  br
+  | 1717 St. Ursen
+p.m-1(retext-skip) <a href="tel:0041774700833"><svg class="icon icon-phone mr-1"><use xlink:href="#icon-phone"></use></svg> 0041 77 470 08 33</a>
+p.m-1(retext-skip) <a href="mailto:sonja@tangofribourg.ch"><svg class="icon icon-email mr-1"><use xlink:href="#icon-email"></use></svg> sonja@tangofribourg.ch</a>
+p.m-1(retext-skip) <a href="https://www.facebook.com/groups/274679539306502/"><svg class="icon icon-facebook mr-1"><use xlink:href="#icon-facebook"></use></svg> Visit us on Facebook</a>

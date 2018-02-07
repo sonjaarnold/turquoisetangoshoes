@@ -1,0 +1,27 @@
+extends(src='_layouts/layout.sgr')
+  block(name='title')
+    title Contact Turquoise Tango Shoes
+  block(name='grid')
+    .grid
+      .grid__child--right
+        h1.hu.mb-8.uppercase Need more info? Contact us!
+          form(name='contact-form' netlify)
+            fieldset.c-form
+              .c-form__row
+                label.c-label(for='name') Name
+                input.c-input-field(type='text' name='name' id='name' autocorrect='off' required)
+              .c-form__row
+                label.c-label(for='name') Surname
+                input.c-input-field(type='text' name='surname' id='surname' autocorrect='off' required)
+              .c-form__row
+                label.c-label(for='email') Email
+                input.c-input-field(type='email' name='email' id='email' autocapitalize='none' autocorrect='off' required)
+              .c-form__row
+                label.c-label(for='message') Your question
+                textarea.c-input-field.c-input-field--multiline(name='question' id='question' rows='10')
+              .c-form__row.text-right
+                button.c-button(type='submit') Send
+      .grid__child--left.main__contact
+        h2.hu Contact:
+        include(src='_includes/logo.sgr')
+        include(src='_includes/contact.sgr')

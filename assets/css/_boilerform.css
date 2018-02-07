@@ -1,0 +1,76 @@
+.c-check-field__decor {
+  display: inline-block;
+  width: .875rem;
+  height: .875rem;
+  background: transparent;
+  border: 1px solid config('colors.grey');
+  position: relative;
+  cursor: pointer;
+  transform: translateY(2px)
+}
+.c-check-field__decor:after {
+  content: "";
+  speak: none;
+  display: block;
+  opacity: 0;
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  background: config('colors.black');
+  border-radius: 1px;
+}
+.c-check-field__label {
+  padding: 0;
+  cursor: pointer;
+}
+.c-check-field__input:checked ~ [class*="decor"]:after {
+  opacity: 1;
+}
+.c-check-field__input:focus ~ [class*="decor"] {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.c-form {
+  max-width: 555px;
+}
+.c-input-field {
+  width: 100%;
+  line-height: 1.1;
+  @apply .block .bg-white .mb-4 .p-3 .border-0 .shadow .text-base .whitespace-normal .align-middle;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  line-height: normal;
+}
+.c-label {
+  @apply .inline .text-sm .text-grey;
+}
+.c-label[for] {
+  cursor: pointer;
+}
+.c-label:after {
+  content: "\A";
+  white-space: pre;
+}
+.c-label + [class*="field"] {
+  margin-top: 2px;
+}
+.c-input-field--multiline {
+  vertical-align: top;
+  overflow: auto;
+}
+.c-input-field--multiline:not([rows]) {
+  min-height: 80px;
+}
+.c-button {
+  @apply .inline-block .border-0 .px-16 .py-3 .mt-3 .mb-4 .no-underline .text-white .text-lg .text-center .cursor-pointer .bg-turquoise;
+  /* padding: 11px 25px 10px 25px; */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.c-button:hover, .c-button:focus {
+  @apply .bg-turquoise-dark;
+}

@@ -1,0 +1,34 @@
+extends(src='_layouts/layout.sgr')
+  block(name='title')
+    title Turquoise Women Tango Shoes
+  block(name='grid')
+    .grid
+      .grid__child--left#options
+        h3.hu Size
+        .option-set.mb-6(data-group='size')
+          each(loop='size of womenSizes')
+            div.inline-block.w-15.c-check-field
+              input.hide.c-check-field__input(type='checkbox' name='size' value='.size-{{ size }}' id='size-{{ size }}')
+              label.c-check-field__decor(for='size-{{ size }}' aria-hidden='true' role='presentation')
+              label.c-check-field__label(for='size-{{ size }}') {{ size / 10 }}
+        h3.hu Heel
+        .option-set.mb-6(data-group='heel')
+          each(loop='heel of womenHeels')
+            div.inline-block.w-15.c-check-field
+              input.hide.c-check-field__input(type="checkbox" name="heel" value=".heel-{{ heel }}" id="heel-{{ heel }}")
+              label.c-check-field__decor(for='heel-{{ heel }}' aria-hidden='true' role='presentation')
+              label.c-check-field__label(for="heel-{{ heel }}") {{ heel / 10 }}
+        h3.hu Color
+        .option-set.mb-6(data-group='color')
+          each(loop='color of womenColors')
+            div.c-check-field
+              input.hide.c-check-field__input(type="checkbox" name="color" value=".color-{{ color }}" id="color-{{ color }}")
+              label.c-check-field__decor(for='color-{{ color }}' aria-hidden='true' role='presentation')
+              label.c-check-field__label(for="color-{{ color }}") {{ color }}
+      .grid__child--right
+        h1.hu.mb-8.uppercase(retext-skip) Choose <span class="text-turquoise">your turquoise</span> shoes
+        #shoes
+          each(loop='shoe of contentful.women')
+            include(src='_includes/shoe.sgr')
+  block(name='javascript')
+    script(src='/js/filter-shoes.js' defer)

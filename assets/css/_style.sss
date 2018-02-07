@@ -1,0 +1,37 @@
+/* Global */
+img
+  @apply .block
+p
+  @apply .my-4
+a
+  @apply .no-underline .text-turquoise
+
+/* override some links to display base color */
+.header__contact a, footer nav a, .footer__contact a
+  @apply .text-grey
+header nav a, .main__contact a
+  @apply .text-black
+
+/* highlight base color links on :hover, :focus and .active */
+:matches(.header__contact, header nav, .main__contact, .footer__contact) a:matches(:hover, :focus), a.active
+  @apply .text-turquoise
+
+/* Grid */
+@media (min-width: 768px)
+  .grid
+    display: grid
+    grid-template-columns: 260px 1fr
+    grid-column-gap: 30px
+  .grid__child--right
+    grid-area: 1 / 2 / 2 / 3 // rs/cs/re/ce
+  .grid__child--left
+    grid-area: 1 / 1 / 2 / 2
+
+.grid-whats-new
+  display: grid
+  grid-template-columns: repeat(auto-fill, 260px)
+  grid-column-gap: 30px
+  justify-content: center
+
+.shoe
+  width: 260px

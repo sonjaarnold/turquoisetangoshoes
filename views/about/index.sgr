@@ -1,0 +1,12 @@
+extends(src='_layouts/layout.sgr')
+  block(name='title')
+    title About Turquoise Tango Shoes
+  block(name='grid')
+    .grid
+      .grid__child--right
+        h1.hu.mb-8.uppercase About us
+        include(src='_includes/about.sgr')
+      .grid__child--left.main__contact
+        h2.hu Contact:
+        include(src='_includes/logo.sgr')
+        include(src='_includes/contact.sgr')

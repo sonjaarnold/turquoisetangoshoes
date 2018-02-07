@@ -1,0 +1,29 @@
+{
+  "menu": [
+    {
+      "title": "What's new",
+      "url": "/",
+      "pageId": "index"
+    },
+    {
+      "title": "Men",
+      "url": "/men/",
+      "pageId": "men-index"
+    },
+    {
+      "title": "Women",
+      "url": "/women/",
+      "pageId": "women-index"
+    },
+    {
+      "title": "About us",
+      "url": "/about/",
+      "pageId": "about-index"
+    },
+    {
+      "title": "Contact",
+      "url": "/contact/",
+      "pageId": "contact-index"
+    }
+  ]
+}
