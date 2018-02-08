@@ -34,7 +34,16 @@ module.exports = {
       menColors: [...available.menColors].sort((a, b) => a < b ? -1 : 1)
     }),
     root: process.cwd() + '/views',
-    minify: env === 'production'
+    minify: {
+      collapseWhitespace: env === 'production',
+      conservativeCollapse: false,
+      aggressiveCollapse: false,
+      removeComments: env === 'production',
+      minifyCss: env === 'production',
+      minifyJs: env === 'production',
+      minifyJson: env === 'production',
+      minifySvg: false
+    }
   }),
   postcss: cssStandards({
     parser: sugarss,
