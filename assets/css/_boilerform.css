@@ -6,7 +6,8 @@
   border: 1px solid config('colors.grey');
   position: relative;
   cursor: pointer;
-  transform: translateY(2px)
+  transform: translateY(2px);
+  margin-right: 6px;
 }
 .c-check-field__decor:after {
   content: "";

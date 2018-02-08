@@ -7,14 +7,14 @@ extends(src='_layouts/layout.sgr')
         h3.hu Size
         .option-set.mb-6(data-group='size')
           each(loop='size of womenSizes')
-            div.inline-block.w-15.c-check-field
+            div.inline-block.w-16.c-check-field
               input.hide.c-check-field__input(type='checkbox' name='size' value='.size-{{ size }}' id='size-{{ size }}')
               label.c-check-field__decor(for='size-{{ size }}' aria-hidden='true' role='presentation')
               label.c-check-field__label(for='size-{{ size }}') {{ size / 10 }}
         h3.hu Heel
         .option-set.mb-6(data-group='heel')
           each(loop='heel of womenHeels')
-            div.inline-block.w-15.c-check-field
+            div.inline-block.w-16.c-check-field
               input.hide.c-check-field__input(type="checkbox" name="heel" value=".heel-{{ heel }}" id="heel-{{ heel }}")
               label.c-check-field__decor(for='heel-{{ heel }}' aria-hidden='true' role='presentation')
               label.c-check-field__label(for="heel-{{ heel }}") {{ heel / 10 }}
