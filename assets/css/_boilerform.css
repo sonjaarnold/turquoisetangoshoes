@@ -39,8 +39,7 @@
 }
 .c-input-field {
   width: 100%;
-  line-height: 1.1;
-  @apply .block .bg-white .mb-4 .p-3 .border-0 .shadow .text-base .whitespace-normal .align-middle;
+  @apply .block .bg-white .mb-4 .px-3 .py-2 .border-0 .shadow .text-base .leading-tight .whitespace-normal .align-middle;
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
@@ -62,6 +61,7 @@ textarea::-webkit-input-placeholder {
 .c-input-field--multiline {
   vertical-align: top;
   overflow: auto;
+  white-space: pre-wrap;
 }
 .c-input-field--multiline:not([rows]) {
   min-height: 80px;
