@@ -69,6 +69,7 @@ module.exports = {
             order: '-sys.createdAt'
           },
           transform: shoe => {
+            shoe.fields.size = shoe.fields.size || [];
             shoe.fields.size = shoe.fields.size.map(el => el * 10);
             shoe.fields.size.forEach(el => available.womenSizes.add(el));
             shoe.fields.color.forEach(el => available.womenColors.add(el));
@@ -84,6 +85,7 @@ module.exports = {
             order: '-sys.createdAt'
           },
           transform: shoe => {
+            shoe.fields.size = shoe.fields.size || [];
             shoe.fields.size = shoe.fields.size.map(el => el * 10);
             shoe.fields.size.forEach(el => available.menSizes.add(el));
             shoe.fields.color.forEach(el => available.menColors.add(el));
