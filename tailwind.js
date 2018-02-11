@@ -47,9 +47,7 @@ let colors = {
   'transparent': 'transparent',
 
   'black': '#1b1b1b',
-  'grey-dark': '#8795a1',
   'grey': '#bfbfbf',
-  'grey-light': '#dae1e7',
   'white': '#ffffff',
   'turquoise': '#2caaaa',
   'turquoise-dark': '#207f7f'
@@ -132,26 +130,6 @@ module.exports = {
       'Droid Sans',
       'Helvetica Neue',
       'sans-serif',
-    ],
-    'serif': [
-      'Constantia',
-      'Lucida Bright',
-      'Lucidabright',
-      'Lucida Serif',
-      'Lucida',
-      'DejaVu Serif',
-      'Bitstream Vera Serif',
-      'Liberation Serif',
-      'Georgia',
-      'serif',
-    ],
-    'mono': [
-      'Menlo',
-      'Monaco',
-      'Consolas',
-      'Liberation Mono',
-      'Courier New',
-      'monospace',
     ]
   },
 
@@ -180,11 +158,6 @@ module.exports = {
     'sm': '.875rem',    // 14px
     'base': '1rem',     // 16px
     'lg': '1.125rem',   // 18px
-    'xl': '1.25rem',    // 20px
-    '2xl': '1.5rem',    // 24px
-    '3xl': '1.875rem',  // 30px
-    '4xl': '2.25rem',   // 36px
-    '5xl': '3rem',      // 48px
   },
 
 
@@ -203,15 +176,8 @@ module.exports = {
   */
 
   fontWeights: {
-    'hairline': 100,
-    'thin': 200,
-    'light': 300,
     'normal': 400,
-    'medium': 500,
-    'semibold': 600,
     'bold': 700,
-    'extrabold': 800,
-    'black': 900,
   },
 
 
@@ -231,7 +197,6 @@ module.exports = {
     'none': 1,
     'tight': 1.25,
     'normal': 1.5,
-    'loose': 2,
   },
 
 
@@ -302,9 +267,6 @@ module.exports = {
   borderWidths: {
     default: '1px',
     '0': '0',
-    '2': '2px',
-    '4': '4px',
-    '8': '8px',
   },
 
 
@@ -346,10 +308,7 @@ module.exports = {
 
   borderRadius: {
     'none': '0',
-    'sm': '.125rem',
     default: '.25rem',
-    'lg': '.5rem',
-    'full': '9999px',
   },
 
 
@@ -390,17 +349,6 @@ module.exports = {
     '32': '8rem',
     '48': '12rem',
     '64': '16rem',
-    '1/2': '50%',
-    '1/3': '33.33333%',
-    '2/3': '66.66667%',
-    '1/4': '25%',
-    '3/4': '75%',
-    '1/5': '20%',
-    '2/5': '40%',
-    '3/5': '60%',
-    '4/5': '80%',
-    '1/6': '16.66667%',
-    '5/6': '83.33333%',
     'full': '100%',
     'screen': '100vw'
   },
@@ -634,10 +582,6 @@ module.exports = {
 
   shadows: {
     default: '0 1px 3px 1px rgba(0,0,0,0.35)',
-    'md': '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
-    'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
-    'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
-    'none': 'none',
   },
 
 
@@ -741,22 +685,22 @@ module.exports = {
 
   modules: {
     appearance: ['responsive'],
-    backgroundAttachment: ['responsive'],
+    backgroundAttachment: false,
     backgroundColors: ['responsive', 'hover'],
-    backgroundPosition: ['responsive'],
-    backgroundRepeat: ['responsive'],
-    backgroundSize: ['responsive'],
-    borderColors: ['responsive', 'hover'],
-    borderRadius: ['responsive'],
+    backgroundPosition: false,
+    backgroundRepeat: false,
+    backgroundSize: false,
+    borderColors: [],
+    borderRadius: [],
     borderStyle: ['responsive'],
-    borderWidths: ['responsive'],
+    borderWidths: [],
     cursor: ['responsive'],
     display: ['responsive'],
     flexbox: ['responsive'],
     float: ['responsive'],
     fonts: ['responsive'],
     fontWeights: ['responsive', 'hover'],
-    height: ['responsive'],
+    height: false,
     leading: ['responsive'],
     lists: ['responsive'],
     margin: ['responsive'],
@@ -764,27 +708,27 @@ module.exports = {
     maxWidth: ['responsive'],
     minHeight: ['responsive'],
     minWidth: ['responsive'],
-    negativeMargin: ['responsive'],
-    opacity: ['responsive'],
+    negativeMargin: false,
+    opacity: false,
     overflow: ['responsive'],
     padding: ['responsive'],
     pointerEvents: ['responsive'],
     position: ['responsive'],
-    resize: ['responsive'],
+    resize: false,
     shadows: ['responsive'],
-    svgFill: [],
-    svgStroke: [],
+    svgFill: false,
+    svgStroke: false,
     textAlign: ['responsive'],
     textColors: ['responsive', 'hover'],
     textSizes: ['responsive'],
-    textStyle: ['responsive', 'hover'],
-    tracking: ['responsive'],
+    textStyle: [],
+    tracking: false,
     userSelect: ['responsive'],
     verticalAlign: ['responsive'],
     visibility: ['responsive'],
     whitespace: ['responsive'],
     width: ['responsive'],
-    zIndex: ['responsive'],
+    zIndex: false,
   },
 
 
