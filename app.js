@@ -1,3 +1,4 @@
+require('dotenv').config()
 const Records = require('spike-records')
 const Contentful = require('spike-contentful')
 const htmlStandards = require('reshape-standard')
@@ -59,8 +60,8 @@ module.exports = {
     }),
     new Contentful({
       addDataTo: locals,
-      accessToken: '5c489c67e492912bebe4c4e3446e4c913261d8059812db54644841663efb374f',
-      spaceId: 'ej50854ab45b',
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      spaceId: process.env.CONTENTFUL_SPACE_ID,
       contentTypes: [
         {
           name: 'women',
