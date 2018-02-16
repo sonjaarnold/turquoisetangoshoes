@@ -5,23 +5,23 @@ extends(src='_layouts/layout.sgr')
     .grid
       .grid__child--left#options
         h3.hu Size
-        .option-set.mb-6(data-group='size')
+        .mb-6
           each(loop='size of menSizes')
             div.inline-block.w-15.c-check-field
-              input.hide.c-check-field__input(type="checkbox" name='size' value=".size-{{ size }}" id="size-{{ size }}")
+              input.hide.c-check-field__input(type="checkbox" name='size' value="size-{{ size }}" id="size-{{ size }}")
               label.c-check-field__decor(for='size-{{ size }}' aria-hidden='true' role='presentation')
               label.c-check-field__label(for="size-{{ size }}") {{ size / 10 }}
         h3.hu Color
-        .option-set.mb-6(data-group='color')
+        .mb-6
           each(loop='color of menColors')
             div.c-check-field
-              input.hide.c-check-field__input(type="checkbox" name="color" value=".color-{{ color }}" id="color-{{ color }}")
+              input.hide.c-check-field__input(type="checkbox" name="color" value="color-{{ color }}" id="color-{{ color }}")
               label.c-check-field__decor(for='color-{{ color }}' aria-hidden='true' role='presentation')
               label.c-check-field__label(for="color-{{ color }}") {{ color }}
       .grid__child--right
         h1.hu.mb-8.uppercase(retext-skip) Choose <span class="text-turquoise">your turquoise</span> shoes
-        #shoes
+        .grid-shoes
           each(loop='shoe of contentful.men')
             include(src='_includes/shoe.sgr')
   block(name='javascript')
-    script(src='/js/filter-shoes.js' defer)
+    script(src='/js/shoes.min.js' defer)

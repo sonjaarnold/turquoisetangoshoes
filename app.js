@@ -21,8 +21,8 @@ const available = {
 module.exports = {
   devtool: 'source-map',
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },
-  ignore: ['**/_layouts/*.sgr', '**/_includes/*.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock', 'package-lock.json', 'data.json'],
-  vendor: ['assets/js/vendor/**', 'assets/js/filter-shoes.js'],
+  ignore: ['**/_layouts/*.sgr', '**/_includes/*.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock', 'package-lock.json', 'data.json', 'assets/js/shoes.js' ],
+  vendor: 'assets/js/shoes.min.js',
   reshape: htmlStandards({
     parser: sugarml,
     locals: (ctx) => Object.assign(locals, {

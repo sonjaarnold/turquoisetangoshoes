@@ -1,4 +1,4 @@
-.shoe.mb-8(class='{{ shoe.fields.size.map(el => "size-" + el).join(" ") }} {{ shoe.fields.heel ? shoe.fields.heel.map(el => "heel-" + el).join(" ") : "" }} {{ shoe.fields.color.map(el => "color-" + el).join(" ") }}')
+.shoe.mb-8.inline-block.baguette(class='{{ shoe.fields.size.map(el => "size-" + el).join(" ") }} {{ shoe.fields.heel ? shoe.fields.heel.map(el => "heel-" + el).join(" ") : "" }} {{ shoe.fields.color.map(el => "color-" + el).join(" ") }}')
   a.image-link(href='{{ shoe.fields.photo.fields.file.url }}')
     img(src='{{ shoe.fields.photo.fields.file.url }}?w=260&h=206' alt='{{ shoe.fields.model }}')
   h3.text-base.text-center.mt-4.mb-0.truncate {{ shoe.fields.model }}
