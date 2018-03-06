@@ -30,3 +30,4 @@ html
         a(href='https://www.contentful.com/' rel='nofollow' target='_blank')
           img.mx-auto.my-4(src='https://images.contentful.com/fo9twyrwpveg/7F5pMEOhJ6Y2WukCa2cYws/398e290725ef2d3b3f0f5a73ae8401d6/PoweredByContentful_DarkBackground.svg' style='max-width:100px;width:100%;' alt='Powered by Contentful')
     block(name='javascript')
+      script(src='/js/main.js' defer)

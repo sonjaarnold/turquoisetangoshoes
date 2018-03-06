@@ -4,7 +4,11 @@ extends(src='_layouts/layout.sgr')
   block(name='grid')
     .grid
       .grid__child--right
-        h1.hu.mb-8.uppercase About us
+        h1.hu.mb-6.uppercase About us
+        .choose-lang.text-right
+          button(value='english' retext-skip) <svg class="flag"><use xlink:href="#flag-gb"></use></svg>
+          button.ml-4(value='french' retext-skip) <svg class="flag"><use xlink:href="#flag-fr"></use></svg>
+          button.ml-4(value='german' retext-skip) <svg class="flag"><use xlink:href="#flag-de"></use></svg>
         include(src='_includes/about.sgr')
       .grid__child--left.main__contact
         h2.hu Contact:

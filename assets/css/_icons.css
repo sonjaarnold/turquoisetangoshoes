@@ -7,3 +7,8 @@
   fill: config('colors.turquoise');
   transform: translateY(3px)
 }
+.flag {
+  display: inline-block;
+  width: 1em;
+  height: .75em;
+}
