@@ -19,7 +19,6 @@ allChooseLangButtons.forEach(function (el) {
 });
 
 function handleChooseLangButtonClick(e) {
-  console.log(e.currentTarget);
   hideAllLangsShowCurrent(e.currentTarget.value);
   localStorage.setItem('language', e.currentTarget.value);
 }

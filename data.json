@@ -1,7 +1,7 @@
 {
   "menu": [
     {
-      "title": "What's new",
+      "title": "Home",
       "url": "/",
       "pageId": "index"
     },

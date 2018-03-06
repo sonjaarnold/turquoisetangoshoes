@@ -21,7 +21,7 @@ const available = {
 module.exports = {
   devtool: 'source-map',
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },
-  ignore: ['**/_layouts/*.sgr', '**/_includes/*.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock', 'package-lock.json', 'data.json', 'assets/js/shoes.js' ],
+  ignore: ['**/_layouts/*.sgr', '**/_includes/*.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock', 'package-lock.json', 'data.json', 'assets/js/shoes.js'],
   vendor: 'assets/js/shoes.min.js',
   reshape: htmlStandards({
     parser: sugarml,
@@ -98,6 +98,17 @@ module.exports = {
           id: 'featured',
           filters: {
             order: '-sys.createdAt'
+          }
+        },
+        {
+          name: 'upcomingSales',
+          id: 'upcomingSales',
+          filters: {
+            order: 'fields.date'
+          },
+          transform: sale => {
+            sale.fields.date = sale.fields.date.split('-').reverse().join('.');
+            return sale;
           }
         }
       ]
