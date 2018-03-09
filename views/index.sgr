@@ -8,11 +8,12 @@ extends(src='_layouts/layout.sgr')
             p.my-0 {{ sale.fields.address }}
             p.mt-0
               a(href='{{ sale.fields.link }}') Facebook event
-    h2.hu.mb-8.uppercase(retext-skip) What's new
-    .grid-shoes
-      each(loop='shoe of contentful.featured[0].fields.model')
-        .shoe.mb-8.inline-block.mr-4
-          a(href='{{ shoe.sys.contentType.sys.id === "women" ? "/women/" : "/men/" }}')
-            img(src='{{ shoe.fields.photo.fields.file.url }}?w=260&h=206' alt='{{ shoe.fields.model }}')
-          h3.text-base.text-center.mt-4.mb-0 {{ shoe.fields.model }}
-          p.text-lg.text-turquoise.text-center.my-0 Price: {{ shoe.fields.price }} CHF
+    if(condition='contentful.featured[0].fields.model.length >= 1')
+      h2.hu.mb-8.uppercase(retext-skip) What's new
+      .grid-shoes
+        each(loop='shoe of contentful.featured[0].fields.model')
+          .shoe.mb-8.inline-block.mr-4
+            a(href='{{ shoe.sys.contentType.sys.id === "women" ? "/women/" : "/men/" }}')
+              img(src='{{ shoe.fields.photo.fields.file.url }}?w=260&h=206' alt='{{ shoe.fields.model }}')
+            h3.text-base.text-center.mt-4.mb-0 {{ shoe.fields.model }}
+            p.text-lg.text-turquoise.text-center.my-0 Price: {{ shoe.fields.price }} CHF
