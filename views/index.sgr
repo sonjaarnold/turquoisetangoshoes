@@ -7,7 +7,8 @@ extends(src='_layouts/layout.sgr')
             p.mb-0.font-bold {{ sale.fields.date }}, {{ sale.fields.hours }}
             p.my-0 {{ sale.fields.address }}
             p.mt-0
-              a(href='{{ sale.fields.link }}') Facebook event
+              a(href='{{ sale.fields.link }}') Event website
+          p(retext-skip) If you cannot make it to one of these sales, <a href="/contact/">contact Sonja</a>.
     if(condition='contentful.featured[0].fields.model.length >= 1')
       h2.hu.mb-8.uppercase(retext-skip) What's new
       .grid-shoes
