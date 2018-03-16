@@ -14,7 +14,7 @@ extends(src='_layouts/layout.sgr')
         h3.hu Color
         .mb-6
           each(loop='color of menColors')
-            div.c-check-field
+            div.inline-block.md_block.mr-6.md_mr-0.c-check-field
               input.hide.c-check-field__input(type="checkbox" name="color" value="color-{{ color }}" id="color-{{ color }}")
               label.c-check-field__decor(for='color-{{ color }}' aria-hidden='true' role='presentation')
               label.c-check-field__label(for="color-{{ color }}") {{ color }}
