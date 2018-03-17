@@ -1,14 +1,5 @@
 extends(src='_layouts/layout.sgr')
   block(name='home')
-    if(condition='contentful.upcomingSales.length >= 1')
-      h2.hu.mb-8.uppercase(retext-skip) Upcoming sales
-        .upcoming-sales.mx-auto.pt-2.pb-8
-          each(loop='sale of contentful.upcomingSales')
-            p.mb-0.font-bold {{ sale.fields.date }}, {{ sale.fields.hours }}
-            p.my-0 {{ sale.fields.address }}
-            p.mt-0
-              a(href='{{ sale.fields.link }}') Event website
-          p(retext-skip) If you cannot make it to one of these sales, <a href="/contact/">contact Sonja</a>.
     if(condition='contentful.featured[0].fields.model.length >= 1')
       h2.hu.mb-8.uppercase(retext-skip) What's new
       .grid-shoes
@@ -18,3 +9,12 @@ extends(src='_layouts/layout.sgr')
               img(src='{{ shoe.fields.photo.fields.file.url }}?w=260&h=206' alt='{{ shoe.fields.model }}')
             h3.text-base.text-center.mt-4.mb-0 {{ shoe.fields.model }}
             p.text-lg.text-turquoise.text-center.my-0 Price: {{ shoe.fields.price }} CHF
+    if(condition='contentful.upcomingSales.length >= 1')
+      h2.hu.mb-8.uppercase(retext-skip) Upcoming sales
+        .upcoming-sales.mx-auto.pt-2.pb-8
+          each(loop='sale of contentful.upcomingSales')
+            h3.text-lg.mb-0.font-bold {{ sale.fields.date }}, {{ sale.fields.hours }}
+            p.my-0 {{ sale.fields.address }}
+            p.mt-0
+              a(href='{{ sale.fields.link }}') Event website
+          p(retext-skip) If you cannot make it to one of these sales, <a href="/contact/">contact Sonja</a>.
