@@ -1,0 +1,81 @@
+.language.english
+  h3.text-base.font-normal.text-turquoise.my-4 How to get your Turquoise shoes:
+  table
+    tr
+      td.align-top.pr-2 In Fribourg
+      td.align-top by appointment
+    tr
+      td.align-top.pr-2 By Mail
+      td.align-top
+        p.m-0 Switzerland 15chf (1-2 working days)
+        p.m-0 European Union: 23chf (4-8 working days)
+        p.m-0 Import duties will be charged by the local delivery company.
+    tr
+      td.align-top.pr-2 At Gourmande Milonga
+      td.align-top
+        p.m-0 on demand only 
+        p.m-0(retext-skip) Get in touch with me the week befor the milonga so I can bring your size to the milonga <a href="http://tangofribourg.ch/la-gourmande-tangobrunch/">http://tangofribourg.ch/la-gourmande-tangobrunch/</a>
+    tr
+      td.align-top.pr-2 At local milongas
+      td.align-top
+        if(condition='contentful.upcomingSales.length >= 1')
+          p.m-0 Upcoming sales:
+          each(loop='sale of contentful.upcomingSales')
+            p.mt-1.mb-0 {{ sale.fields.date }}, {{ sale.fields.hours }}
+            p.m-0 {{ sale.fields.address }}
+            p.m-0
+              a(href='{{ sale.fields.link }}') Event website
+.language.french(style='display: none')
+  h3.text-base.font-normal.text-turquoise.my-4 Comment obtenir une paire de Turquoise:
+  table
+    tr
+      td.align-top.pr-2 A Fribourg
+      td.align-top sur rdv
+    tr
+      td.align-top.pr-2 Par correspondance
+      td.align-top
+        p.m-0 Suisse 15chf (1-2 jours ouvrables)
+        p.m-0 Union européenne 23chf (4-8 jours)
+        p.m-0 Le dédouanement vous sera facturé par votre livreur.
+    tr
+      td.align-top.pr-2 A la Gourmande Milonga
+      td.align-top
+        p.m-0 sur demande 
+        p.m-0(retext-skip) Merci de me contacter la semaine qui précède la Gourmande. <a href="http://tangofribourg.ch/la-gourmande-tangobrunch/">http://tangofribourg.ch/la-gourmande-tangobrunch/</a>
+    tr
+      td.align-top.pr-2 Aux milongas de la région
+      td.align-top
+        if(condition='contentful.upcomingSales.length >= 1')
+          p.m-0 aux dates communiquées ci-dessous:
+          each(loop='sale of contentful.upcomingSales')
+            p.mt-1.mb-0 {{ sale.fields.date }}, {{ sale.fields.hours }}
+            p.m-0 {{ sale.fields.address }}
+            p.m-0
+              a(href='{{ sale.fields.link }}') Site de l'événement
+.language.german(style='display: none')
+  h3.text-base.font-normal.text-turquoise.my-4 So kommst du zu Deinen Turquoise:
+  table
+    tr
+      td.align-top.pr-2 In Freiburg
+      td.align-top einen Termin ausmachen & anprobieren kommen
+    tr
+      td.align-top.pr-2 Per Post
+      td.align-top
+        p.m-0 Schweiz 15chf (1-2 Werktage)
+        p.m-0 EU 23chf (4-8 Werktage)
+        p.m-0 EU: Die Importzölle werden Dir vom zuständigen Speditionsunternehmen in Rechnung gestellt.
+    tr
+      td.align-top.pr-2 An der Gourmande Milonga
+      td.align-top
+        p.m-0 Auf Anfrage 
+        p.m-0(retext-skip) Kontaktiere mich die Woche vor der Gourmande-Milonga. So kann ich dir die Schuhe deiner Grösse zum Anprobieren mitbringen. <a href="http://tangofribourg.ch/la-gourmande-tangobrunch/">http://tangofribourg.ch/la-gourmande-tangobrunch/</a>
+    tr
+      td.align-top.pr-2 An weiteren Milongas
+      td.align-top
+        if(condition='contentful.upcomingSales.length >= 1')
+          p.m-0 Schuhverkäufe an diesen Daten:
+          each(loop='sale of contentful.upcomingSales')
+            p.mt-1.mb-0 {{ sale.fields.date }}, {{ sale.fields.hours }}
+            p.m-0 {{ sale.fields.address }}
+            p.m-0
+              a(href='{{ sale.fields.link }}') Event-Website

@@ -1,12 +1,13 @@
 .grid.border-t.py-8
   .footer__about.grid__child--right
-    .flex.justify-between
-      h3.text-base.font-normal.text-turquoise About turquoise:
+    .flex.justify-end
       .choose-lang
         button.ml-4(value='english' retext-skip) <svg class="flag"><use xlink:href="#flag-gb"></use></svg>
         button.ml-4(value='french' retext-skip) <svg class="flag"><use xlink:href="#flag-fr"></use></svg>
-        button.ml-4(value='german' retext-skip) <svg class="flag"><use xlink:href="#flag-de"></use></svg>
-    include(src='_includes/about.sgr')
+        button.ml-4(value='german' retext-skip) <svg class="flag"><use xlink:href="#flag-de"></use></svg>    
+    include(src='_includes/howtoget.sgr')
+    if(condition='pageId !== "about-index"')
+      include(src='_includes/about.sgr')
   if(condition='pageId !== "contact-index"')
     .footer__contact.grid__child--left
       h3.text-base.font-normal.text-turquoise Contact us:

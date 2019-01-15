@@ -9,7 +9,15 @@ extends(src='_layouts/layout.sgr')
           button(value='english' retext-skip) <svg class="flag"><use xlink:href="#flag-gb"></use></svg>
           button.ml-4(value='french' retext-skip) <svg class="flag"><use xlink:href="#flag-fr"></use></svg>
           button.ml-4(value='german' retext-skip) <svg class="flag"><use xlink:href="#flag-de"></use></svg>
-        include(src='_includes/about.sgr')
+        .language.english
+          p(mdi) During years of tango dancing, I was looking for the perfect tango shoe being comfortable and beautiful at the same time. It’s in Istanbul that I found what I was looking for: Turquoise Tango Shoes.
+          p(mdi) Their high standard of quality, comfort and design convinced me right away. I travelled back to Switzerland with a suitcase full of shoes. Since spring 2014, happy clients keep coming back for another pair of Turquoise shoes.
+        .language.french(style='display: none')
+          p(mdi) Dansant depuis de longues années, j’étais à la recherche d’une chaussure de tango de très haute qualité réunissant confort et esthétique. A Istanbul, j’ai trouvé mon bonheur avec la marque Turquoise.
+          p(mdi) Rentrant de ce voyage avec une valise remplie de chaussures, je compte maintenant de nombreux danseurs et danseuses parmi mes clients réguliers s’offrant une nouvelle paire pour danser en confort durant des nuits entières…
+        .language.german(style='display: none')
+          p(mdi) Als langjährige Tänzerin hab ich lange nach einem qualitativ hochstehendem, bequemen und schönen Tangoschuh gesucht. In Istanbul habe ich die Marke Turquoise kennen und lieben gelernt. Ich war überzeugt von Qualität, Tragkomfort und Design und bin damals mit einem Koffer voller Tangoschuhen nach Hause geflogen.
+          p(mdi) Seither sind viele Turquoise-Kunden und Kundinnen regelmässig bei mir und freuen sich über ein weiteres Paar, mit dem sie lange Nächte vertanzen.
       .grid__child--left.main__contact
         h2.hu Contact:
         include(src='_includes/logo.sgr')

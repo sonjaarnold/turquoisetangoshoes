@@ -24,10 +24,7 @@ html
     footer.bg-black.text-grey(role='contentinfo')
       .inner
         include(src='_includes/nav.sgr')
-        if(condition='pageId !== "about-index"')
-          include(src='_includes/footer.sgr')
+        include(src='_includes/footer.sgr')
         p.text-center.border-t.pt-4.mt-0 &copy; Turquoise {{ year }}, All rights reserved
-        a(href='https://www.contentful.com/' rel='nofollow' target='_blank')
-          img.mx-auto.my-4(src='https://images.contentful.com/fo9twyrwpveg/7F5pMEOhJ6Y2WukCa2cYws/398e290725ef2d3b3f0f5a73ae8401d6/PoweredByContentful_DarkBackground.svg' style='max-width:100px;width:100%;' alt='Powered by Contentful')
     block(name='javascript')
       script(src='/js/main.js' defer)

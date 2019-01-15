@@ -27,5 +27,7 @@ function hideAllLangsShowCurrent(currentLanguage) {
   allLanguagesTexts.forEach(function (el) {
     return el.style.display = 'none';
   });
-  document.querySelector('.' + currentLanguage).style.display = 'block';
+  document.querySelectorAll('.' + currentLanguage).forEach(function (el) {
+    return el.style.display = 'block';
+  });
 }
