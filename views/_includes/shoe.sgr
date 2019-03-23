@@ -5,4 +5,7 @@
   else
     img(src='/img/thumb.png' alt='{{ shoe.fields.model }}')
   h3.text-base.text-center.mt-4.mb-0.truncate {{ shoe.fields.model }}
-  p.text-lg.text-turquoise.text-center.my-0 Price: {{ shoe.fields.price }} CHF
+  if(condition='shoe.fields.sale')
+    p.text-lg.text-turquoise.text-center.my-0(retext-skip) Price: <span class="line-through">{{ shoe.fields.price }}</span><span class="text-pink"> {{ shoe.fields.sale }} CHF</span>
+  else
+    p.text-lg.text-turquoise.text-center.my-0 Price: {{ shoe.fields.price }} CHF

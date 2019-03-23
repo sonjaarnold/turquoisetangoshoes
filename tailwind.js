@@ -50,7 +50,8 @@ let colors = {
   'grey': '#bfbfbf',
   'white': '#ffffff',
   'turquoise': '#2caaaa',
-  'turquoise-dark': '#207f7f'
+  'turquoise-dark': '#207f7f',
+  'pink': '#eb5286'
 }
 
 module.exports = {
