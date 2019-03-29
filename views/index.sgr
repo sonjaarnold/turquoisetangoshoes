@@ -8,4 +8,7 @@ extends(src='_layouts/layout.sgr')
             a(href='{{ shoe.sys.contentType.sys.id === "women" ? "/women/" : "/men/" }}')
               img(src='{{ shoe.fields.photo.fields.file.url }}?w=260&h=206' alt='{{ shoe.fields.model }}')
             h3.text-base.text-center.mt-4.mb-0 {{ shoe.fields.model }}
-            p.text-lg.text-turquoise.text-center.my-0 Price: {{ shoe.fields.price }} CHF
+            if(condition='shoe.fields.sale')
+              p.text-lg.text-turquoise.text-center.my-0(retext-skip) Price: <span class="line-through">{{ shoe.fields.price }}</span><span class="text-pink"> {{ shoe.fields.sale }} CHF</span>
+            else
+              p.text-lg.text-turquoise.text-center.my-0 Price: {{ shoe.fields.price }} CHF
