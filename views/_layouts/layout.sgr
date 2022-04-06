@@ -5,7 +5,6 @@ html
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     meta(name='description' content='Tangoschuhe Turquoise / Chaussures de tango Turquoise')
-    meta(name='author' content='fusil.li')
     block(name='title')
       title Turquoise Tango Shoes
     link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Work+Sans')
