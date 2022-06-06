@@ -11,18 +11,6 @@
         p.mt-3.mb-0 To the European Union: 23chf (4-8 working days)
         p.m-0 Import duties will be charged by the local delivery company.
     tr
-      td.align-top.pr-2.pt-3 At Gourmande Milonga
-      td.align-top.pt-3
-        p.m-0 On demand only 
-        p.m-0 Get in touch with me the week before the milonga.
-        p.m-0 I will bring your size to the milonga.
-        if(condition='contentful.upcomingSales.length >= 1')
-          each(loop='sale of contentful.upcomingSales')
-            if(condition='sale.fields.address.substring(0, 20) == "Milonga La Gourmande"')
-              p.mt-3.mb-0 {{ sale.fields.date }}, {{ sale.fields.hours }}
-              p.m-0 {{ sale.fields.address }}
-        p.mt-3.mb-0(retext-skip) <a href="http://tangofribourg.ch/la-gourmande-tangobrunch/">Event website</a>
-    tr
       td.align-top.pr-2.pt-3 At local milongas
       td.align-top.pt-3
         if(condition='contentful.upcomingSales.length >= 1')
@@ -46,17 +34,6 @@
         p.mt-3.mb-0 Pour l’Union européenne 23chf (4-8 jours)
         p.m-0 Le dédouanement vous sera facturé par votre livreur.
     tr
-      td.align-top.pr-2.pt-3 A la Gourmande Milonga
-      td.align-top.pt-3
-        p.m-0 Sur demande 
-        p.m-0 Merci de me contacter la semaine qui précède la Gourmande.
-        if(condition='contentful.upcomingSales.length >= 1')
-          each(loop='sale of contentful.upcomingSales')
-            if(condition='sale.fields.address.substring(0, 20) == "Milonga La Gourmande"')
-              p.mt-3.mb-0 {{ sale.fields.date }}, {{ sale.fields.hours }}
-              p.m-0 {{ sale.fields.address }}
-        p.mt-3.mb-0(retext-skip) <a href="http://tangofribourg.ch/la-gourmande-tangobrunch/">Site de l’événement</a>
-    tr
       td.align-top.pr-2.pt-3 Aux milongas de la région
       td.align-top.pt-3
         if(condition='contentful.upcomingSales.length >= 1')
@@ -79,18 +56,6 @@
         p.m-0 Innerhalb der Schweiz 15chf (1-2 Werktage)
         p.mt-3.mb-0 In die EU 23chf (4-8 Werktage)
         p.m-0 Importzölle werden Dir vom zuständigen Speditionsunternehmen in Rechnung gestellt.
-    tr
-      td.align-top.pr-2.pt-3 An der Gourmande Milonga
-      td.align-top.pt-3
-        p.m-0 Auf Anfrage 
-        p.m-0 Kontaktiere mich die Woche vor der Gourmande-Milonga.
-        p.m-0(retext-skip) Ich kann dir die Schuhe deiner Grösse mitbringen.
-        if(condition='contentful.upcomingSales.length >= 1')
-          each(loop='sale of contentful.upcomingSales')
-            if(condition='sale.fields.address.substring(0, 20) == "Milonga La Gourmande"')
-              p.mt-3.mb-0 {{ sale.fields.date }}, {{ sale.fields.hours }}
-              p.m-0 {{ sale.fields.address }}
-        p.mt-3.mb-0(retext-skip) <a href="http://tangofribourg.ch/la-gourmande-tangobrunch/">Event-Website</a>
     tr
       td.align-top.pr-2.pt-3 An weiteren Milongas
       td.align-top.pt-3
