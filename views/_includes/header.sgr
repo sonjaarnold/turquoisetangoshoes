@@ -1,7 +1,6 @@
 .header__contact.bg-black.text-grey.text-xs.pt-3.pb-4
   .inner.md_flex.md_justify-between
     p.m-0(retext-skip) Contact us: <svg class="icon icon-phone text-base ml-2 mr-1"><use xlink:href="#icon-phone"></use></svg> <a href="tel:0041774700833">0041 77 470 08 33</a> <a href="mailto:sonja@tangofribourg.ch" class="block sm_inline"><svg class="icon icon-email text-base sm_ml-3 mr-1"><use xlink:href="#icon-email"></use></svg> sonja@tangofribourg.ch</a>
-    p.m-0(retext-skip) <a href="https://www.facebook.com/turquoiseswitzerland/">Turquoise Tango Shoes Switzerland on <svg class="icon icon-facebook text-base ml-1"><use xlink:href="#icon-facebook"></use></svg></a>
 
 .inner.flex.justify-center.py-6
   if(condition='pageId === "index"')
